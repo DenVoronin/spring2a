@@ -1,0 +1,1 @@
+create table cars (id int not null primary key auto_increment, manufacturedName varchar (30) not null, engine varchar (30) not null, modelName varchar (30) not null, wheel varchar (30) not null, transmission varchar (30) not null, gear varchar (30) not null);

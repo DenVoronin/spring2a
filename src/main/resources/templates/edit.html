@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit car</title>
+</head>
+<body>
+<h1>Edit car</h1>
+<form name="auth" method="post" action="/create">
+    <p><b>Id (edit disable)</b><br>
+
+        <input type="text" readonly size="40" name = "id" th:value="${car.id}">
+    </p>
+    <p><b>Model</b><br>
+
+        <input type="text" size="40" name = "modelName" th:value="${car.modelName}">
+    </p>
+    <p><b>Manufacture</b><br>
+        <input type="text" size="40" name ="manufacturedName" th:value="${car.manufacturedName}">
+    </p>
+    <p><b>Engine</b><br>
+
+    <p><select name="engine" size="2" multiple >
+        <option selected value="Diesel">Diesel</option>
+        <option value="Petrol">Petrol</option>
+
+    </select>
+    <p><b>Gear</b><br>
+        <input type="text" size="40" name ="gear" th:value="${car.gear}">
+    </p>
+    <p><b>Wheel</b><br>
+        <input type="text" size="40" name ="wheel" th:value="${car.wheel}">
+    </p>
+    <p><b>Transmission</b><br>
+        <input type="text" size="40" name ="transmission" th:value="${car.transmission}">
+    </p>
+    <p><input type="submit" value="Save">
+    <p><a href="/">To List</a></p>
+</body>
+</html>
