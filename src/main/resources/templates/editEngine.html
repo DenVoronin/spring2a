@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Engine</title>
+</head>
+<body>
+<h1>Edit car</h1>
+<form name="auth" method="post" action="/editEngine">
+    <p><b>Id (edit disable)</b><br>
+
+        <input type="text" readonly size="40" name = "id" th:value="${engine.id}">
+    </p>
+    <p><b>Model</b><br>
+
+        <input type="text" size="40" name = "name" th:value="${engine.name}">
+    </p>
+
+
+    <p><select name="engineType" size="2" multiple >
+        <option selected value="Diesel">Diesel</option>
+        <option value="Petrol">Petrol</option>
+
+    </select>
+
+    <p><input type="submit" value="Save">
+    <p><a href="/">To List</a></p>
+</body>
+</html>

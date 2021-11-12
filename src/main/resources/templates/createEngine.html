@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new car</title>
+</head>
+<body>
+<h1>New car</h1>
+<form name="auth" method="post" action="/createEngine">
+    <p><b>Name</b><br>
+        <input type="text" size="40" name = "name" value="">
+    </p>
+<p><b>Engine</b><br>
+<p><select name="engineType" size="2" multiple>
+    <option selected value="Diesel">Diesel</option>
+    <option value="Petrol">Petrol</option>
+    
+   </select>
+    <p><input type="submit" value="Create">
+    <p><a href="/">To List</a></p>
+ </body>
+</html>
