@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new car</title>
+</head>
+<body>
+<h1>New car</h1>
+<form name="auth" method="post" action="/">
+    <p><b>Model</b><br>
+
+        <input type="text" size="40" name = "modelName" value="">
+    </p>
+    <p><b>Manufacture</b><br>
+        <input type="text" size="40" name ="manufacturedName" value="">
+    </p>
+<p><b>Engine</b><br>
+<p>
+
+    <select name="engine">
+        <option value=""> -- </option>
+        <option th:each="engine : ${engines}"
+                th:value="${engine.id}"
+                th:utext="${engine.name}"/>
+    </select> </p>
+
+
+
+    <p><b>Gear</b><br>
+        <input type="text" size="40" name ="gear" value="">
+    </p>
+    <p><b>Wheel</b><br>
+        <input type="text" size="40" name ="wheel" value="">
+    </p>
+    <p><b>Transmission</b><br>
+        <input type="text" size="40" name ="transmission" value="">
+    </p>
+    <p><input type="submit" value="Create">
+    <p><a href="/">To List</a></p>
+ </body>
+</html>
