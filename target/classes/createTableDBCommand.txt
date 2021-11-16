@@ -1,3 +1,0 @@
-create database cars;
-create table cars (id int not null primary key auto_increment, manufactured_name varchar (30) not null,  engine int, FOREIGN KEY (engine) REFERENCES engines (Id), model_name varchar (30) not null, wheel varchar (30) not null, transmission varchar (30) not null, gear varchar (30) not null);
-create table engines (id int not null primary key auto_increment, name varchar (30) not null, engine_type varchar (30) not null);
